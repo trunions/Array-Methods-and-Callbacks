@@ -55,8 +55,8 @@ hint - you should be looking at the stage key inside of the objects
 */
 
 function getFinals(data) {
-
-}
+    retun data.filter(i => i.stage === "Final")
+};
 
 
 
@@ -66,9 +66,9 @@ Use the higher-order function called getYears to do the following:
 2. Receive a callback function getFinals from task 2 
 3. Return an array called years containing all of the years in the getFinals data set*/
 
-function getYears(/* code here */) {
-    /* code here */
-}
+function getYears(arr, cb) {
+    return cb(arr).map(i => i["Year"])
+};
 
 
 
